@@ -16,7 +16,7 @@ public class HlavniOkno extends JFrame {
     private final PreferenceController controller;
 
     public HlavniOkno(PreferenceController controller) throws HeadlessException {
-        super("Preference");
+        super("Oblíbená barva");
         this.controller = controller;
         this.init();
     }
@@ -42,40 +42,39 @@ public class HlavniOkno extends JFrame {
             .add("span");
 
     formBuilder
-            .label("&Oblíbená barva")
             .radioButton("Žlutá", "barva", Zluta)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Zelená", "barva", Zelena)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Červená", "barva", Cervena)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Modrá", "barva", Modra)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Oranžová", "barva", Oranzova)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Fiaolvá", "barva", Fialova)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Růžová", "barva", Ruzova)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Hnědá", "barva", Hneda)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Černá", "barva", Cerna)
-            .add();
+            .add("left, span");
     formBuilder
             .radioButton("Bílá", "barva", Bila)
-            .add();
+            .add("left, span");
     formBuilder
             .panel(panel -> {
                 JButton ulozitButton = new JButton(controller.getUlozitAction());
-
+                getRootPane().setDefaultButton(ulozitButton);
                 panel.add(ulozitButton);
                 })
                 .add("right, span");

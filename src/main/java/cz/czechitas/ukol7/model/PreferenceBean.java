@@ -10,29 +10,26 @@ public class PreferenceBean implements ObservableBean {
     private final ExtendedPropertyChangeSupport pcs = new ExtendedPropertyChangeSupport(this);
 
     private String prezdivka;
-    private Barva oblibenaBarva;
+    private Barva barva;
 
     public String getPrezdivka() {
         return prezdivka;
     }
 
     public void setPrezdivka(String prezdivka) {
-        if (prezdivka.isBlank()) {
-            prezdivka = null;
-        }
         String oldValue = this.prezdivka;
         this.prezdivka = prezdivka;
         pcs.firePropertyChange("prezdivka", oldValue, prezdivka);
     }
 
-    public Barva getOblibenaBarva() {
-        return oblibenaBarva;
+    public Barva getBarva() {
+        return barva;
     }
 
-    public void setOblibenaBarva(Barva oblibenaBarva) {
-        Barva oldValue = this.oblibenaBarva;
-        this.oblibenaBarva = oblibenaBarva;
-        pcs.firePropertyChange("oblibenaBarva", oldValue, oblibenaBarva);
+    public void setBarva(Barva barva) {
+        Barva oldValue = this.barva;
+        this.barva = barva;
+        pcs.firePropertyChange("oblibenaBarva", oldValue, barva);
     }
 
     @Override
